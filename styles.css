@@ -254,6 +254,30 @@ button:not(:disabled):hover {
   font-weight: 600;
 }
 
+.line-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
+}
+
+.line-jump {
+  background: #0f172a;
+  color: #fff;
+  border-radius: 999px;
+  border: none;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.3);
+}
+
+.line-jump:hover,
+.line-jump:focus {
+  outline: none;
+  background: #1e293b;
+}
+
 .tts-dock {
   position: fixed;
   bottom: 0;

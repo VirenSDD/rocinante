@@ -9,38 +9,18 @@ export function initSpeech() {
 }
 
 export function playOtherVoices() {
-  if (!speechSupported) {
-    setStatus("La lectura en voz alta no está disponible en este navegador.");
-    return;
-  }
-  if (!state.selectedCharacterId) {
-    setStatus("Selecciona tu personaje antes de iniciar la lectura.");
-    return;
-  }
-  if (!state.data) {
-    setStatus("Aún no se ha cargado el texto.");
-    return;
-  }
+  startPlaybackAt(0, "Reproduciendo parlamentos de otros personajes…");
+}
 
-  const queue = state.data.lines.map((line, idx) => ({ line, idx }));
-  const hasOtherLines = queue.some(
-    ({ line }) => !line.characterIds.includes(state.selectedCharacterId)
-  );
-
-  if (!hasOtherLines) {
-    setStatus("No hay parlamentos de otros personajes para reproducir.");
+/**
+ * @param {number} lineIndex
+ */
+export function jumpToLine(lineIndex) {
+  if (Number.isNaN(lineIndex)) {
+    setStatus("No se pudo reproducir ese fragmento.");
     return;
   }
-
-  cancelSpeech();
-  state.playbackQueue = queue;
-  state.currentQueueIndex = 0;
-  state.speechPlaying = true;
-  state.isPaused = false;
-  state.autoPausedForUser = false;
-  updatePauseButtonView();
-  setStatus("Reproduciendo parlamentos de otros personajes…");
-  continuePlayback();
+  startPlaybackAt(lineIndex, "Reproduciendo desde el fragmento seleccionado…");
 }
 
 export function pauseSpeech() {
@@ -113,6 +93,45 @@ export function updateLanguageOptions() {
     });
 
   elements.languageSelect.value = previousValue || "auto";
+}
+
+/**
+ * @param {number} startIndex
+ * @param {string} statusMessage
+ */
+function startPlaybackAt(startIndex, statusMessage) {
+  if (!speechSupported) {
+    setStatus("La lectura en voz alta no está disponible en este navegador.");
+    return;
+  }
+  if (!state.selectedCharacterId) {
+    setStatus("Selecciona tu personaje antes de iniciar la lectura.");
+    return;
+  }
+  if (!state.data) {
+    setStatus("Aún no se ha cargado el texto.");
+    return;
+  }
+
+  const queue = state.data.lines.map((line, idx) => ({ line, idx }));
+  const hasOtherLines = queue.some(
+    ({ line }) => !line.characterIds.includes(state.selectedCharacterId)
+  );
+
+  if (!hasOtherLines) {
+    setStatus("No hay parlamentos de otros personajes para reproducir.");
+    return;
+  }
+
+  cancelSpeech();
+  state.playbackQueue = queue;
+  state.currentQueueIndex = Math.min(Math.max(startIndex, 0), queue.length - 1);
+  state.speechPlaying = true;
+  state.isPaused = false;
+  state.autoPausedForUser = false;
+  updatePauseButtonView();
+  setStatus(statusMessage);
+  continuePlayback();
 }
 
 function continuePlayback() {

@@ -9,7 +9,7 @@ import {
 } from "../dom.js";
 import { renderCharacterList, renderLines } from "../renderers.js";
 import { speechSupported, state } from "../state.js";
-import { pauseSpeech, playOtherVoices, stopSpeechPlayback } from "../services/speech.js";
+import { pauseSpeech, playOtherVoices, stopSpeechPlayback, jumpToLine } from "../services/speech.js";
 
 /**
  * @param {Event} event
@@ -87,4 +87,15 @@ export function bindActionButtons() {
   elements.playOthers.addEventListener("click", playOtherVoices);
   elements.pauseSpeech.addEventListener("click", pauseSpeech);
   elements.stopSpeech.addEventListener("click", () => stopSpeechPlayback());
+  elements.linesContainer.addEventListener("click", (event) => {
+    const target = event.target;
+    if (!(target instanceof HTMLElement)) return;
+    if (target.classList.contains("line-jump")) {
+      event.preventDefault();
+      event.stopPropagation();
+      const index = Number(target.dataset.lineIndex);
+      if (Number.isNaN(index)) return;
+      jumpToLine(index);
+    }
+  });
 }

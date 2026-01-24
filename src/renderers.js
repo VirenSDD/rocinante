@@ -58,6 +58,20 @@ export function renderLines() {
     }
 
     card.appendChild(textEl);
+
+    const actionsEl = document.createElement("div");
+    actionsEl.className = "line-actions";
+    const jumpBtn = document.createElement("button");
+    jumpBtn.type = "button";
+    jumpBtn.className = "line-jump";
+    jumpBtn.dataset.lineIndex = String(index);
+    jumpBtn.textContent = "▶ Reproducir";
+    jumpBtn.setAttribute(
+      "aria-label",
+      `Reproducir desde esta línea de ${line.characterIds.map((id) => state.characterMap[id] || id).join(" + ")}`
+    );
+    actionsEl.appendChild(jumpBtn);
+    card.appendChild(actionsEl);
     card.tabIndex = 0;
     card.addEventListener("click", () => revealLine(textEl));
     card.addEventListener("keypress", (event) => {
