@@ -17,48 +17,44 @@
     </header>
 
     <main>
-      <section class="panel" aria-label="Controles principales">
-        <div class="control">
-          <label for="characterSelect">Personaje que estoy ensayando</label>
-          <select id="characterSelect">
-            <option value="">Selecciona un personaje</option>
-          </select>
-        </div>
-        <div class="control">
-          <button id="toggleLines" class="primary" disabled>Ocultar mis parlamentos</button>
-        </div>
-        <div class="control">
-          <label for="textSizeRange">Tamaño del texto <span id="textSizeLabel"></span></label>
-          <input id="textSizeRange" type="range" min="16" max="28" value="18" step="1" />
-        </div>
-        <div class="control">
-          <label for="speechRate">Velocidad de lectura <span id="speechRateLabel"></span></label>
-          <input id="speechRate" type="range" min="0.8" max="1.4" step="0.05" value="1" />
-        </div>
-        <div class="control">
-          <label for="languageSelect">Idioma preferido de la voz</label>
-          <select id="languageSelect" aria-describedby="languageHelper">
-            <option value="auto">Detectar automáticamente (prioriza español)</option>
-          </select>
-          <small id="languageHelper" class="helper">
-            Elige español para forzar la pronunciación correcta o deja que detectemos el idioma por línea.
-          </small>
-        </div>
-        <div class="control current-line">
-          <span class="current-line-label">Texto en reproducción</span>
-          <p id="currentLineText">Aún no hay audio en curso. Pulsa “Reproducir otras voces”.</p>
-        </div>
-        <div class="control tts-controls">
-          <button id="playOthers" class="primary" disabled>Reproducir otras voces</button>
-          <button id="pauseSpeech" class="secondary" disabled>Pausar lectura</button>
-          <button id="stopSpeech" class="secondary">Detener</button>
-        </div>
-        <p id="statusMessage" role="status" aria-live="polite"></p>
-      </section>
-
       <section class="panel character-panel" aria-label="Personajes">
         <h2>Personajes</h2>
+        <p class="helper">Toca un personaje para ensayar sus parlamentos.</p>
         <ul id="characterList"></ul>
+      </section>
+
+      <section id="controlsPanel" class="panel controls-panel collapsed" aria-label="Controles principales">
+        <button
+          id="controlsToggle"
+          class="collapse-trigger"
+          aria-expanded="false"
+          aria-controls="controlsBody"
+        >
+          Mostrar panel de control
+        </button>
+        <div class="controls-body" id="controlsBody" hidden>
+          <div class="control">
+            <button id="toggleLines" class="primary" disabled>Mostrar mis parlamentos</button>
+          </div>
+          <div class="control">
+            <label for="textSizeRange">Tamaño del texto <span id="textSizeLabel"></span></label>
+            <input id="textSizeRange" type="range" min="16" max="28" value="18" step="1" />
+          </div>
+          <div class="control">
+            <label for="speechRate">Velocidad de lectura <span id="speechRateLabel"></span></label>
+            <input id="speechRate" type="range" min="0.8" max="1.4" step="0.05" value="1" />
+          </div>
+          <div class="control">
+            <label for="languageSelect">Idioma preferido de la voz</label>
+            <select id="languageSelect" aria-describedby="languageHelper">
+              <option value="auto">Detectar automáticamente (prioriza español)</option>
+            </select>
+            <small id="languageHelper" class="helper">
+              Elige español para forzar la pronunciación correcta o deja que detectemos el idioma por línea.
+            </small>
+          </div>
+        </div>
+        <p id="statusMessage" class="status-text" role="status" aria-live="polite"></p>
       </section>
 
       <section class="panel" aria-label="Texto de la obra">
@@ -67,10 +63,18 @@
       </section>
     </main>
 
-    <footer>
-      <p>Consejo: selecciona tu personaje, oculta tus parlamentos y deja que la app lea el resto.</p>
-    </footer>
+    <section class="tts-dock" aria-label="Control de lectura en voz alta">
+      <div class="tts-info">
+        <span class="current-line-label">Texto en reproducción</span>
+        <p id="currentLineText">Aún no hay audio en curso. Pulsa “Iniciar lectura”.</p>
+      </div>
+      <div class="tts-buttons" role="group" aria-label="Controles de voz">
+        <button id="playOthers" class="primary" disabled>Iniciar lectura</button>
+        <button id="pauseSpeech" class="secondary" disabled>Pausar</button>
+        <button id="stopSpeech" class="secondary">Detener</button>
+      </div>
+    </section>
 
-    <script src="app.js" type="module"></script>
+    <script src="src/main.js" type="module"></script>
   </body>
 </html>
