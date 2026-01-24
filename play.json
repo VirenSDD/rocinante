@@ -1,0 +1,628 @@
+{
+  "playId": "393cefd1-7c6d-44b2-9ab3-90e75ab74095",
+  "title": "Besos para la Bella Durmiente",
+  "author": "J. Luis Alonso de Santos",
+  "description": "Una adaptación teatral humorística y poética del cuento clásico, donde el amor, la música y un toque de metateatro resuelven el conflicto entre el bien y el mal.",
+  "characters": [
+    { "id": "trovador", "name": "Trovador" },
+    { "id": "princesa_vega", "name": "Princesa Vega" },
+    { "id": "rey_doroteo", "name": "Rey Doroteo" },
+    { "id": "reina_magdalena", "name": "Reina Magdalena" },
+    { "id": "paje", "name": "Paje" },
+    { "id": "hada_buena", "name": "Hada Buena" },
+    { "id": "hada_mala", "name": "Hada Mala" },
+    { "id": "caballero_rubio", "name": "Caballero Rubio" },
+    { "id": "jaco_rubio", "name": "Jaco del Caballero Rubio" },
+    { "id": "caballero_moreno", "name": "Caballero Moreno" },
+    { "id": "jaco_moreno", "name": "Jaco del Caballero Moreno" },
+    { "id": "chambelan", "name": "Chambelán" },
+    { "id": "labriego", "name": "Labriego" },
+    { "id": "todos", "name": "Todos / Coro" }
+  ],
+  "lines": [
+    {
+      "characterIds": ["trovador"],
+      "text": "Yo soy un trovador con capa de armiño, un trovador de aquellos de los cuentos de niños. La música de este laúd me ayuda en mi trovar, que llena de leyendas y cuentos el lugar. El mundo gris y feo se llena de color, se marcha el frío y regresa el calor. Yo arranco notas a mi instrumento que por los aires lleva el viento. Y narro con su voz suave y armoniosa una historia de amor muy bella y deleitosa."
+    },
+    {
+      "characterIds": ["trovador"],
+      "text": "PRIMERA PARTE. Capítulo uno: de cómo comienza esta historia en un palacio sin niños. Había una vez, en un país muy lejano, unos señores Reyes, siempre muy apenados, porque no tenían niños que mecer en sus brazos, ni niñas chiquitas a las que adornar con lazos. Llamaron a magos y a grandes hechiceros, a astrónomos, a curas y a expertos milagreros, por más que esperaron ningún hijo tuvieron."
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "¡Qué desgracia tan grande, morir sin descendencia! ¡Nada pueden los rezos, la magia, ni la ciencia!"
+    },
+    {
+      "characterIds": ["trovador"],
+      "text": "Y brotan de sus ojos lágrimas muy amargas. Y salen de su boca quejas muy tristes... y muy largas. Y con el rey, la reina se queja y se lamenta, y de sus ojos sale también una tormenta."
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "¡Quiero un hijo chiquito, obediente y bonito!"
+    },
+    {
+      "characterIds": ["reina_magdalena"],
+      "text": "¡Y yo una princesita, graciosa y redondita!"
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "¡Un niño de cristal, de miel y caramelo!"
+    },
+    {
+      "characterIds": ["reina_magdalena"],
+      "text": "¡Una hijita con ojitos del color del cielo!"
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "¡Qué triste sino el mío!"
+    },
+    {
+      "characterIds": ["reina_magdalena"],
+      "text": "¡Cualquier labradora, sin ser reina ni nada, hace un hijo en una hora! ¡Las siervas y vasallas tienen hijos a pares, y yo, siendo la Reina, estoy llorando a mares!"
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "¡Es verdad lo que dices en tus tristes lamentos! ¿ómo tendrán los hijos, quienes los tienen a cientos? ¡Traedme aquí un labriego que encuentren por el camino, y, o me dice el secreto, o lo cuelgo de un pino!"
+    },
+    {
+      "characterIds": ["trovador"],
+      "text": "El gordo Chambelán, báculo en mano. El Rey sigue con sus quejas; igual hace su señora, y se cogen de las manos y siguen llora que llora."
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "¡Qué grande es mi dolor, ay, Magdalena! ¡Qué triste está mi alma, y con qué pena de no tener un niño en el palacio que llene con sus juegos tanto espacio!"
+    },
+    {
+      "characterIds": ["reina_magdalena"],
+      "text": "¡Qué grande es mi dolor, ay, Doroteo! ¡Que no entre en esta casa ni un solo tebeo! ¡Quién tuviera un hijito en cada almena que cada noche pidiera su cena!"
+    },
+    {
+      "characterIds": ["rey_doroteo", "reina_magdalena"],
+      "text": "¡Quién tuviera una cuna a cada lado, y en cada cuna un príncipe acostado!"
+    },
+    {
+      "characterIds": ["chambelan"],
+      "text": "¡Majestad, el labriego ya llegó!"
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "¡Acércate! ¡Ven, buen hombre, aquí, a mi lado! ¿Tienes tú algún hijo, campesino?"
+    },
+    {
+      "characterIds": ["labriego"],
+      "text": "Catorce, majestad, y otro que está en camino."
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "¡Catorce tiene y está otro esperando! ¡De envidia que me da me está matando! ¿ómo lo haces para tener... tantos? ¿Cantas y bailas o rezas a santos?"
+    },
+    {
+      "characterIds": ["labriego"],
+      "text": "¡Si es muy sencillo y muy fácil de hacer! Ni rezos ni gente tiene que haber. Se tienen 'tos' que ir, menos la parienta, que ella sí que tiene que estar, que es la que cuenta; y con la ropa no se puede tenerlos. Hay que quitarse antes todos los perifollos."
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "¡Mira bien lo que dices, villano! ¡Que la reina solo puede mostrar el pelo! ¡Y un rey no se desnuda, vive el cielo! Se puede uno enfriar, y eso no es sano."
+    },
+    {
+      "characterIds": ["labriego"],
+      "text": "Pues le digo la forma, majestad, y ansí usted se avía a voluntad."
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "¡No!"
+    },
+    {
+      "characterIds": ["labriego"],
+      "text": "Sí, Majestad, ansí. Ansí se hace como digo. Ansí es como yo lo consigo, y ansí me hicieron a mí."
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "¡El tocarse con las manos eso es cosa de villanos! ¡Indigno de mi persona!"
+    },
+    {
+      "characterIds": ["labriego"],
+      "text": "Pues su Majestad verá, porque no hay otra manera. Ansí es y ansí siempre será en palacio o en la era."
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "Pues hagámoslo y veremos. Por probar nada perdemos. Mas, ¡ay de vos, si mentís!"
+    },
+    {
+      "characterIds": ["labriego"],
+      "text": "Que sí, Majestad, que sí. (¡Qué pesaos son los reyes!; ¡así le salen luego las leyes!)"
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "Venid, Magdalena, aquí. Acercaos a mi lado. Y escuchad este recado. Todos los demás, salid."
+    },
+    {
+      "characterIds": ["reina_magdalena"],
+      "text": "¿Eso hay que hacerlo ahora o después de la cena?"
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "Cuanto antes es mejor, si merece la pena."
+    },
+    {
+      "characterIds": ["reina_magdalena"],
+      "text": "¡Todo sea, Doroteo, por una nena!"
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "¡Todo sea por un nene, Magdalena! ¡Apáguese la luz de aquesta almena! ¡No es posible con corona!"
+    },
+    {
+      "characterIds": ["trovador"],
+      "text": "Capítulo 2: De cómo nació la princesita y lo que hubo que hacer para callarla. Han pasado nueve meses y el rey salta de contento, porque la reina dio a luz. ¡í que funcionó el invento! Y al nacer la criaturita empezó un llanto tan fiero que agrió toda la tierra y subió hasta el alto cielo."
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "¡Qué niña más pequeña, tan dulce y delicada!"
+    },
+    {
+      "characterIds": ["reina_magdalena"],
+      "text": "¡Qué niña más bonita, tan bella como un hada!"
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "¡Una niña que tiene una piel deliciosa!"
+    },
+    {
+      "characterIds": ["reina_magdalena"],
+      "text": "¡Una niña que tiene una voz poderosa!"
+    },
+    {
+      "characterIds": ["chambelan"],
+      "text": "Calla, guapa, no llores. No me quites los lentes. ¡Uy! ¡Me ha mordido un dedo! ¡Ha nacido con dientes!"
+    },
+    {
+      "characterIds": ["reina_magdalena"],
+      "text": "Eso es que la ha asustado esa cara horrorosa. ¡Es muy duro al nacer contemplar esa cosa! ¡áyase, chambelán! ¡Deme a mi hija querida, verá cómo en mis brazos se callará enseguida!"
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "A ver, dámela a mí, mujer, que me conoce. ¡Soy tu padre! ¡No llores! ¡Y no des esas voces! ¡Nena, calla, bonita, te regalo un castillo! ¡A quien la haga callar lo hago primer ministro! Este llanto tan fiero, es que no lo resisto."
+    },
+    {
+      "characterIds": ["reina_magdalena"],
+      "text": "¿Qué sabes tú de niños? Eres el rey de Espadas, de Bastos y de Copas, pero de niños nada. ¡No es un soldadote. Y no tiene bigote! ¡Una hija no le hace ni caso a un rey tan monigote!"
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "Deja ya de decirme locos razonamientos, ¡que sueltas cada día más de mil cuatrocientos! ¡Mucho mejor sería que le dieras la teta, o mira a ver si quiere comerse una galleta."
+    },
+    {
+      "characterIds": ["trovador"],
+      "text": "Lo intentan los criados, lo intenta el chambelán, lo intenta el arzobispo, lo intentan muchos más, pero nadie consigue a la niña callar, y llora que te llora, no para de llorar. En el regio salón entra ahora un pajecillo, e hincando la rodilla, va y dice muy sencillo:"
+    },
+    {
+      "characterIds": ["paje"],
+      "text": "¿Me permitís, Majestad?"
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "¿Quién eres?"
+    },
+    {
+      "characterIds": ["paje"],
+      "text": "Un paje."
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "¡Hablad!"
+    },
+    {
+      "characterIds": ["chambelan"],
+      "text": "A ver si tiene hambre y quiere un bocadillo."
+    },
+    {
+      "characterIds": ["paje"],
+      "text": "Si su Majestad consiente que con esta flauta intente callarla este servidor."
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "No sé si será peor, lo ha intentado mucha gente. ¡Pero toca, toca, toca! ¡Tengo la cabeza loca!"
+    },
+    {
+      "characterIds": ["trovador"],
+      "text": "Vega, pequeña Vega, de todas las estrellas tú eres la más hermosa y la que siempre da más luz. Vega, pequeña Vega, hija de la Luna y el Sol, eres de todo el Cielo la estrella de más fulgor."
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "¡Por fin se ha callado!"
+    },
+    {
+      "characterIds": ["reina_magdalena"],
+      "text": "¡Por fin se ha callado! Mirad qué carilla está ahora poniendo: ¡al mirar al paje se está sonriendo!"
+    },
+    {
+      "characterIds": ["chambelan"],
+      "text": "¡La flauta del paje la ha tranquilizado! Se anuncia: ¡la princesa se ha callado y los reyes por fin han descansado! ¡Y lo que se ha anunciado ha de quedar en crónicas futuras anotado!"
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "Por ser súbdito leal te nombro flautero real. Irás a estudiar solfeo al mejor conservatorio, aunque a muchos dejarán sordos."
+    },
+    {
+      "characterIds": ["trovador"],
+      "text": "En el palacio, mientras, serios y preocupados, le andan buscando un nombre que resulte adecuado."
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "La podríamos llamar..."
+    },
+    {
+      "characterIds": ["chambelan"],
+      "text": "¡Rigoberta, Majestad!"
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "¡Vaya! ¡Qué barbaridad!"
+    },
+    {
+      "characterIds": ["chambelan"],
+      "text": "¡Chindasvinta, que es un nombre muy fine!"
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "¡Muy fino y muy peregrino!"
+    },
+    {
+      "characterIds": ["chambelan"],
+      "text": "Ya lo tengo: ¡Astolfa!"
+    },
+    {
+      "characterIds": ["reina_magdalena"],
+      "text": "¿Astolfa? ¡Eso sí que tiene solfa!"
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "A ver cómo le ponemos: Justina, Bobina, Tina, o Cretina, o Celestina..."
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "¡No, que terminan todos en 'ina', igual que termina 'orina'!"
+    },
+    {
+      "characterIds": ["paje"],
+      "text": "¿Podría yo sugerir... un nombre a su Majestad?"
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "Pues oigámosle que opine, a ver si es buen inventor. Habla, pajecillo, dime."
+    },
+    {
+      "characterIds": ["paje"],
+      "text": "Vega es el nombre, señor. Vega, como la vega de un fresco manantial, Vega, como la estrella que da luz celestial."
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "¡Vega es un nombre bonito!"
+    },
+    {
+      "characterIds": ["reina_magdalena"],
+      "text": "¡Vega es un nombre cortito!"
+    },
+    {
+      "characterIds": ["todos"],
+      "text": "¡Vega se debe llamar!"
+    },
+    {
+      "characterIds": ["trovador"],
+      "text": "Capítulo III: De cómo se pelearon el Hada Buena y el Hada Mala y el maleficio que cayó sobre la princesa. Y llegamos al momento en que se está celebrando una fiesta en el palacio de muy alto ringorrango. Bautizan a la princesa y comen muchas perdices, beben vino, se disfrazan y bailan todos felices."
+    },
+    {
+      "characterIds": ["hada_buena"],
+      "text": "Mi princesita adorada: desde hoy serás ahijada de la reina de las hadas. Serás lista y generosa, serás sencilla y graciosa, serás dulce y muy hermosa. Tendrás lagos y jardines con lirios, rosas, jazmines y un millón de calcetines. Y tendrás voz de soprano y tocarás el piano con los pies y con las manos."
+    },
+    {
+      "characterIds": ["trovador"],
+      "text": "En su moto voladora, de pronto y con gran sorpresa, comparece el hada mala y aparca sobre la mesa. Una comisión de hadas agasaja a la princesa, con una gran carcajada y con la mirada aviesa. En el hombro trae posada a su negra ave de presa."
+    },
+    {
+      "characterIds": ["hada_mala"],
+      "text": "¡Qué escena tan delicada! ¡Todos aquí tan felices, comiéndose las perdices y yo no he sido invitada! Mas esto no queda así, ¡que no puedo soportarlo! Nadie que me ofende a mí puede luego disfrutarlo. Os haré una faena que os haga a todos llorar más agua que hay en el mar. ¡Vengándome con la nena!"
+    },
+    {
+      "characterIds": ["hada_buena"],
+      "text": "¿Qué ganas con la maldad y no amando la bondad, la acción noble y delicada, como hacemos otras hadas?"
+    },
+    {
+      "characterIds": ["hada_mala"],
+      "text": "Gano que lo paso pipa. Me desternillo de risa, más que jugando a la comba."
+    },
+    {
+      "characterIds": ["hada_buena"],
+      "text": "Ser bueno es maravilloso. Sembrar el bien es hermoso, y el mal es algo espantoso."
+    },
+    {
+      "characterIds": ["hada_mala"],
+      "text": "Ser bueno es hacer el oso: un oficio empalagoso, ñño, bobo, memo y soso. Gano que lo paso bomba."
+    },
+    {
+      "characterIds": ["hada_buena"],
+      "text": "¡No le hagas daño a mi ahijada, que es pequeña y delicada, muy dulce y muy tiernita, muy guapa y muy chiquita!"
+    },
+    {
+      "characterIds": ["hada_mala"],
+      "text": "¡Pues me da a mí cien patadas: la princesita, cincuenta y tú el resto de la cuenta, reina cursi de las hadas! Basta de palabrería! ¡Vamos a la hechicería! \"Abracadabra, pata de cabra: por el diente peludo de un sapo viudo, por la luna, lunera, cascabelera, por los granos gordos de todos los ogros...\" La niña mayor se hará, y con algo se pinchará, la sangre le brotará y dormida se quedará. Para siempre así estará y nunca despertará."
+    },
+    {
+      "characterIds": ["hada_buena"],
+      "text": "¡No, Hada Malvada, no! Dormida se quedará, que nada puedo hacer yo, pero se despertará. Todo el que el cuento ha leído sabe que este cuento acaba bien, y que un príncipe aguerrido vendrá en su lindo corcel y le devolverá el color al darle un beso de amor."
+    },
+    {
+      "characterIds": ["hada_mala"],
+      "text": "¡Amor no queda ya en ningún lado!"
+    },
+    {
+      "characterIds": ["hada_buena"],
+      "text": "¡Vendrá a besarla un príncipe enamorado! ¡Lo que pasa es que envidias a la nena!"
+    },
+    {
+      "characterIds": ["hada_mala"],
+      "text": "Yo me voy a mi casa, a hacer la cena. El hechizo un día la dormirá, y nadie jamás la despertará!"
+    },
+    {
+      "characterIds": ["trovador"],
+      "text": "Fueron pasando los días, fueron pasando los años. Y las hojas de este cuento de aquellos tiempos de antaño. Y se fue haciendo mayor y creció la princesita, con su carita de fresa y su nariz chiquitita. Al cumplir los quince años la joven al jardín salió: una rosa la llamaba, y la rosa ella cogió. Y al coger ella la rosa en un dedo se pinchó, y al pincharse con la rosa el hechizo se cumplió. Y la bella princesita quedó dormida esperando, que a sus labios llegue lo que está soñando."
+    },
+    {
+      "characterIds": ["princesa_vega"],
+      "text": "Ya te acercas, lo sé por ese viento que me trae tu olor entre las hojas, a librarme de este triste lamento cuando pinte el sol las nubes rojas. Ya te acercas montado en tu caballo con el color de la rosa que enmaraña sus patas en las flores, bello doncel, brillante como un rayo, que me trae el amor de mis amores."
+    },
+    {
+      "characterIds": ["trovador"],
+      "text": "SEGUNDA PARTE. Capítulo 1. De cómo la princesa durmió y durmió hasta que llegó el amor. Pasaron años y años y la princesa seguía presa en su sueño dorado, durmiendo día tras día, y nada la despertaba, y nadie lo conseguía. Mucho rezaron los curas, sus rosarios desgranaron, y los astrónomos moros las estrellas consultaron, y nada la despertaba, y nadie lo conseguía."
+    },
+    {
+      "characterIds": ["trovador"],
+      "text": "Capítulo IV.- De cómo fue el encuentro de dos caballeros con sus dos jacos en busca del amor."
+    },
+    {
+      "characterIds": ["caballero_rubio"],
+      "text": "Soy un caballero delicado que de amor estoy necesitado, para ligarme a la princesa. Muy fiero me quiso hacer mi padre y me preparó para la guerra, pero yo prefiero el amor a aquella vida perra de la guerra. Se dice aquí cómo se ha de besar, para que la princesa se pueda despertar."
+    },
+    {
+      "characterIds": ["jaco_rubio"],
+      "text": "Mi amo es el que mejor besa, encima o debajo de la mesa las deja a todas patitiesas, labradoras o abadesas."
+    },
+    {
+      "characterIds": ["caballero_moreno"],
+      "text": "Yo soy el más grande caballero debajo del ala de un sombrero, nadie hay bajo la capa del cielo más gallardo y postinero. Vamos, vamos, brioso corcel a poner en su carita un beso."
+    },
+    {
+      "characterIds": ["caballero_rubio"],
+      "text": "¿A dónde vais, caballero?"
+    },
+    {
+      "characterIds": ["caballero_moreno"],
+      "text": "A la princesa que quiero va mi caballo buscando. Y vos, ¿qué hacéis, caballero, por aqueste paradero?"
+    },
+    {
+      "characterIds": ["caballero_rubio"],
+      "text": "Pues lo mismo, ¡vive el Cielo! Y si a eso vais caminando, aquí os podéis ir quedando, que yo me pido primero."
+    },
+    {
+      "characterIds": ["caballero_moreno"],
+      "text": "Para decir que me quede, ¿quién sois, si saberse puede?"
+    },
+    {
+      "characterIds": ["caballero_rubio"],
+      "text": "Soy, señor, quien os incita de nuevo a la retirada. Soy, señor, el Marqués de la Ensenada."
+    },
+    {
+      "characterIds": ["caballero_moreno"],
+      "text": "Podíais haberos ahorrado el paseo, señor Marqués, pues estando yo delante, nada os queda por hacer."
+    },
+    {
+      "characterIds": ["caballero_rubio"],
+      "text": "¡Que peguéis, señor, os digo y empecéis vos el primero!"
+    },
+    {
+      "characterIds": ["caballero_moreno"],
+      "text": "¡Jamás golpearé yo antes que vos, caballero!"
+    },
+    {
+      "characterIds": ["caballero_rubio"],
+      "text": "¡Que peguéis!"
+    },
+    {
+      "characterIds": ["caballero_moreno"],
+      "text": "¡Que vos primero!"
+    },
+    {
+      "characterIds": ["jaco_rubio"],
+      "text": "Qué pesados son, por Dios, con tanto \"dad vos, dad vos\"."
+    },
+    {
+      "characterIds": ["jaco_moreno"],
+      "text": "Yo no entiendo a los humanos, ni nunca los entendí. Los jacos nos comprendemos con mirarnos, ¿a que sí? Tengo yo un poco de hambrillo. ¿Lleváis algo en el hatillo?"
+    },
+    {
+      "characterIds": ["jaco_rubio"],
+      "text": "Traigo aquí un poco de paja, guisada de hoy y muy maja."
+    },
+    {
+      "characterIds": ["trovador"],
+      "text": "Y los dos caballeretes, ya bastante majaretas, se alejan comiendo flores y dando mil volteretas."
+    },
+    {
+      "characterIds": ["princesa_vega"],
+      "text": "Estoy harta de estar aquí tumbada y de esperar y esperar a ser mayor; no quiero seguir más aquí plantada esperando de un príncipe el amor. ¡Quiero vivir! ¡No quiero soñar más! Quiero correr, saltar esa ventana, quiero viajar, cantar, jugar, bailar, quiero ver dónde nace la mañana."
+    },
+    {
+      "characterIds": ["hada_mala"],
+      "text": "Anselmo, ¡qué escalerón hay en este torreón! Ya podrían haberlo puesto en alguna planta baja; es que llego sin aliento: ¡me está matando la faja!"
+    },
+    {
+      "characterIds": ["paje"],
+      "text": "(Llegando a la ventana) Si te descubren aquí, será el fin para los dos. No lo pienses más y salta, que no te pasará nada."
+    },
+    {
+      "characterIds": ["hada_mala"],
+      "text": "Ay, Anselmo, ¡qué llorera! ¡Otra vez estoy llorando! Como no he llorado nunca, ahora me estoy desquitando. ¿ú también lloras, cariño? ¿Quieres que les ayudemos? Pero ahora es imposible, que poderes no tenemos."
+    },
+    {
+      "characterIds": ["trovador"],
+      "text": "Entra ahora por la ventana el Pajecillo Valiente. Viene de estudiar solfeo en un país de Poniente, y se acerca enamorado a la Princesa durmiente."
+    },
+    {
+      "characterIds": ["paje"],
+      "text": "Mi Princesa Vega. De tierras lejanas vengo para amarte, que, aunque estaba lejos, no pude olvidarte. Mi Princesa Vega, la estrella del cielo, la más deseada, del sueño en que yaces serás rescatada."
+    },
+    {
+      "characterIds": ["trovador"],
+      "text": "Él se acerca hasta su lado, se reclina sobre su pecho, y sobre sus yertos labios pone con ternura un beso. Entonces ella despierta, sus ojos abre, lo mira y le dice lo que sigue, mientras que de amor suspira:"
+    },
+    {
+      "characterIds": ["princesa_vega"],
+      "text": "Desde que a mí tu música ha llegado y tus labios sobre los míos se han puesto, mi sangre ha empezado a correr presto."
+    },
+    {
+      "characterIds": ["paje"],
+      "text": "Que te besaba, amor, y despertaba, siempre soñé que al fin ocurría y que así yo mi vida encontraría, pues mi vida tan solo en ti se hallaba."
+    },
+    {
+      "characterIds": ["princesa_vega"],
+      "text": "Ya amanece el sol en mi jardín, y estallan ya los trigos en mi era; ya veo llegar a mí la primavera y abrirse la corona del jazmín."
+    },
+    {
+      "characterIds": ["trovador"],
+      "text": "Capítulo II. De cómo fue el despertar oficial de la princesa y lo que sucedió al descubrirse la verdad. Y llegamos a la audiencia en el salón de palacio con banderas, estandartes, mucha gente y poco espacio. Sus majestades, los reyes, van entrando en sus sitiales, ya se escuchan cornetines y resuenan los timbales."
+    },
+    {
+      "characterIds": ["hada_buena"],
+      "text": "Sus Graciosas Majestades: tráigoles una primicia de la estupenda noticia que remediará sus males. Encontré dos caballeros dueños los dos de castillos, que esperan en los pasillos con sus capas y sombreros."
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "Venga, pueden empezar! ¡Ya está bien de reverencias! ¡Voy a perder la paciencia! ¡El beso le pueden dar!"
+    },
+    {
+      "characterIds": ["caballero_rubio"],
+      "text": "Os cede el puesto mi honor. Sed el primero señor."
+    },
+    {
+      "characterIds": ["caballero_moreno"],
+      "text": "¿Otra vez? Pues ¡vive Dios! que no lo conseguiréis y primero no me haréis, que el primero seréis vos."
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "Ay, Magdalena, qué trago, el estar aquí sentado oyendo todos los días del año majaderías!"
+    },
+    {
+      "characterIds": ["trovador"],
+      "text": "Entra ahora otro pretendiente, con un casco y un capote. Tiene pinta de soldado y en la cara un gran bigote. (Y antes de ser contestado, va y se acerca a la Princesa. Le susurra algo al oído, y luego, por fin, la besa. Ella, al recibir el beso, hace como que despierta, y todos en el palacio quedan con la boca abierta.)"
+    },
+    {
+      "characterIds": ["todos"],
+      "text": "¡Mirad! ¡Se ha despertado! ¡Qué besazo le habrá dado!"
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "¿Has visto eso, Magdalena? ¡Nuestra hijita, tan bonita, se estira y abre los ojos y se mueve en su camita!"
+    },
+    {
+      "characterIds": ["princesa_vega"],
+      "text": "¿Qué hay para desayunar? ¿Sabéis? Estuve soñando que despertar no podía, hasta que mi amor venía y me despertó besando."
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "Pero, ¿qué es esto que veo? Este viene disfrazado. Aquí hay gato encerrado. ¡Basta ya de besuqueo! ¡Una cosa es despertarla, y otra distinta es besarla, abrazarla y estrujarla, tocarla y mordisquearla!"
+    },
+    {
+      "characterIds": ["reina_magdalena"],
+      "text": "¡Es el pajecillo aquel, que volvió!"
+    },
+    {
+      "characterIds": ["chambelan"],
+      "text": "¡Al quitarle el bigote, lo descubrió!"
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "¡No dejaré que te cases con el primero que pase! ¡Pues estaríamos buenos! ¡Y siendo músico, menos, que no tienen ni condados, ni tierras, ni principados, ni una casita aquí al lado!"
+    },
+    {
+      "characterIds": ["princesa_vega"],
+      "text": "¡Pues a mí me gusta mucho! Igual que la trucha al trucho."
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "¡Jamás princesas y pajes se han juntado ni casado! ¡ú, a la cama otra vez! ¡Y tú, quedas desterrado!"
+    },
+    {
+      "characterIds": ["trovador"],
+      "text": "Al destierro, allá a lo lejos, se marcha el Paje penando. Y la Princesa, muy triste, vuelve a su cama llorando. Y parece que esta historia va a terminar muy mal: El Rey, con su ordeno y mando, ha decretado el final."
+    },
+    {
+      "characterIds": ["trovador"],
+      "text": "Escena III: De cómo llegamos al final de esta historia con un cambio sorprendente."
+    },
+    {
+      "characterIds": ["hada_mala"],
+      "text": "¡Alto! ¡Que esto acabe así no lo voy a consentir! Creí que amor ya no había cuando hice la brujería. Ahora he descubierto yo dónde el amor se quedó. ¡Ven, pajecillo salado, aquí conmigo, a este lado! Ellos son, los trovadores, el músico y el cantor, los bailarines o actores los que guardan el amor. Y por eso él, al besarla, ha logrado despertarla. Con él se debe casar y esto así ha de terminar."
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "¡No es príncipe, ni guerrero!"
+    },
+    {
+      "characterIds": ["reina_magdalena"],
+      "text": "¡Ni duque, ni caballero!"
+    },
+    {
+      "characterIds": ["chambelan"],
+      "text": "¡Ni alguien con mucho dinero!"
+    },
+    {
+      "characterIds": ["hada_mala"],
+      "text": "Ellos poseen el tesoro que en el corazón está. Ellos, que en lugar del oro buscan dar felicidad. Ah, rey molesto y gruñón! Aun sin poderes de hada, puedo deshacer todo esto y convertírtelo en la nada. Voy a coger tu palacio y hacértelo de cartón; tu corona, de hojalata, y tu cetro, de latón: \"Gire la fortuna maga, Todo de teatro se haga. Que todo se cambie en un decorado y el castillo quede solo pintado.\""
+    },
+    {
+      "characterIds": ["trovador"],
+      "text": "Se hace la transformación. De la sorpresa tan grande, todos quedan boquiabiertos. El suelo es un escenario y el castillo está pintado. El vestuario es de teatro: ya todo es un decorado."
+    },
+    {
+      "characterIds": ["hada_mala"],
+      "text": "¡Ya está! ¡Ya todo ha cambiado! Ya no hay nadie aquí mandando. ¡Somos cómicos jugando!"
+    },
+    {
+      "characterIds": ["rey_doroteo"],
+      "text": "¿Entonces ya no soy rey? ¿Ya no hago aquí la ley? ¡La vida es una quimera!"
+    },
+    {
+      "characterIds": ["reina_magdalena"],
+      "text": "¿Si he dejado de ser reina... Me puedo entonces quitar la corona y los zapatos, que me aprietan a rabiar?"
+    },
+    {
+      "characterIds": ["paje"],
+      "text": "Ahora ya nadie puede prohibirnos nuestro amor. Juntos nos marcharemos con mi flauta tocando por todos los caminos los cielos alegrando, ya de día o de noche, haga frío o calor."
+    },
+    {
+      "characterIds": ["princesa_vega"],
+      "text": "Sí, tú me enseñarás y seré trovadora. Y para que no vuelva a quedarme dormida ni vuelva ya jamás a estar triste en mi vida, un beso me darás muy dulce cada hora."
+    },
+    {
+      "characterIds": ["chambelan"],
+      "text": "Bueno y yo, ¿con quién me beso? ¡Estoy más solo que un queso!"
+    },
+    {
+      "characterIds": ["trovador"],
+      "text": "Entra entonces, al oírle, el Labriego del principio. Y acercándose a su lado va y le susurra este ripio:"
+    },
+    {
+      "characterIds": ["labriego"],
+      "text": "Aquí estoy yo para besarte, majo, con olor de cebollas y de ajo."
+    },
+    {
+      "characterIds": ["todos"],
+      "text": "A besar, a besar, vamos todos a besar al del lado y otro lado, al de arriba y al de abajo. A besar, a besar, vamos a todos a besar y muy bien lo vas a pasar."
+    },
+    {
+      "characterIds": ["trovador"],
+      "text": "Y la historia así termina llena de novios y amores. Confetis y serpentinas caen del cielo de colores."
+    }
+  ]
+}
