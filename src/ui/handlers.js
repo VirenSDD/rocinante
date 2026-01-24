@@ -15,9 +15,13 @@ import { pauseSpeech, playOtherVoices, stopSpeechPlayback } from "../services/sp
  * @param {Event} event
  */
 export function handleCharacterChange(event) {
-  const target = /** @type {HTMLSelectElement} */ (event.target);
-  state.selectedCharacterId = target.value;
-  state.hideMyLines = false;
+  const target = /** @type {HTMLElement} */ (event.target);
+  const characterItem = target.closest("[data-character-id]");
+  if (!characterItem) return;
+  const characterId = characterItem.getAttribute("data-character-id");
+  if (!characterId) return;
+  state.selectedCharacterId = characterId;
+  state.hideMyLines = true;
   updateToggleButtonLabel(state.hideMyLines);
   elements.toggleLines.disabled = !state.selectedCharacterId;
   elements.playOthers.disabled = !state.selectedCharacterId || !speechSupported;

@@ -15,7 +15,6 @@ export const elements = {
   title: /** @type {HTMLElement} */ (getRequiredElement("playTitle")),
   author: /** @type {HTMLElement} */ (getRequiredElement("playAuthor")),
   description: /** @type {HTMLElement} */ (getRequiredElement("playDescription")),
-  characterSelect: /** @type {HTMLSelectElement} */ (getRequiredElement("characterSelect")),
   toggleLines: /** @type {HTMLButtonElement} */ (getRequiredElement("toggleLines")),
   textSizeRange: /** @type {HTMLInputElement} */ (getRequiredElement("textSizeRange")),
   textSizeLabel: /** @type {HTMLElement} */ (getRequiredElement("textSizeLabel")),
@@ -28,8 +27,13 @@ export const elements = {
   currentLineText: /** @type {HTMLElement} */ (getRequiredElement("currentLineText")),
   statusMessage: /** @type {HTMLElement} */ (getRequiredElement("statusMessage")),
   characterList: /** @type {HTMLElement} */ (getRequiredElement("characterList")),
-  linesContainer: /** @type {HTMLElement} */ (getRequiredElement("linesContainer"))
+  linesContainer: /** @type {HTMLElement} */ (getRequiredElement("linesContainer")),
+  controlsSection: /** @type {HTMLElement} */ (getRequiredElement("controlsPanel")),
+  controlsBody: /** @type {HTMLElement} */ (getRequiredElement("controlsBody")),
+  controlsToggle: /** @type {HTMLButtonElement} */ (getRequiredElement("controlsToggle"))
 };
+
+let controlsCollapsed = true;
 
 /**
  * @param {string} message
@@ -90,4 +94,23 @@ export function updatePauseButtonView() {
   } else {
     elements.pauseSpeech.textContent = "Pausar lectura";
   }
+}
+
+/**
+ * @param {boolean} collapsed
+ */
+export function setControlsCollapsed(collapsed) {
+  controlsCollapsed = collapsed;
+  elements.controlsSection.classList.toggle("collapsed", collapsed);
+  elements.controlsBody.hidden = collapsed;
+  elements.controlsToggle.setAttribute("aria-expanded", String(!collapsed));
+  elements.controlsToggle.textContent = collapsed ? "Mostrar panel de control" : "Ocultar panel de control";
+}
+
+export function toggleControlsPanel() {
+  setControlsCollapsed(!controlsCollapsed);
+}
+
+export function getControlsCollapsed() {
+  return controlsCollapsed;
 }

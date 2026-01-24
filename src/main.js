@@ -2,7 +2,7 @@ import { setStatus, updateCurrentLineDisplay, updateSpeechRateLabel, updateTextS
 import { applyPlayData, resetPlaybackState, speechSupported, state } from "./state.js";
 import { initControls } from "./ui/controls.js";
 import { loadPlayData } from "./services/playLoader.js";
-import { renderCharacterList, renderHeading, renderLines, populateCharacterSelect } from "./renderers.js";
+import { renderCharacterList, renderHeading, renderLines } from "./renderers.js";
 import { initSpeech, stopSpeechPlayback, updateLanguageOptions } from "./services/speech.js";
 import { elements } from "./dom.js";
 
@@ -16,7 +16,6 @@ async function init() {
     const { data, usedFallback } = await loadPlayData();
     applyPlayData(data);
     renderHeading();
-    populateCharacterSelect();
     renderCharacterList();
     renderLines();
     setStatus(

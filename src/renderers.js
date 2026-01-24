@@ -8,17 +8,6 @@ export function renderHeading() {
   elements.description.textContent = state.data.description;
 }
 
-export function populateCharacterSelect() {
-  if (!state.data) return;
-  elements.characterSelect.innerHTML = '<option value="">Selecciona un personaje</option>';
-  state.data.characters.forEach((character) => {
-    const option = document.createElement("option");
-    option.value = character.id;
-    option.textContent = character.name;
-    elements.characterSelect.appendChild(option);
-  });
-}
-
 export function renderCharacterList() {
   if (!state.data) return;
   elements.characterList.innerHTML = "";
@@ -26,8 +15,10 @@ export function renderCharacterList() {
     const li = document.createElement("li");
     li.textContent = character.name;
     if (state.selectedCharacterId === character.id) {
-      li.style.backgroundColor = "#fed7aa";
+      li.classList.add("selected");
     }
+    li.tabIndex = 0;
+    li.dataset.characterId = character.id;
     elements.characterList.appendChild(li);
   });
 }
@@ -39,6 +30,7 @@ export function renderLines() {
   state.data.lines.forEach((line, index) => {
     const card = document.createElement("article");
     card.className = "line-card";
+    card.dataset.lineIndex = String(index);
     const includesSelected =
       state.selectedCharacterId && line.characterIds.includes(state.selectedCharacterId);
     if (includesSelected) {
@@ -79,6 +71,7 @@ export function renderLines() {
   });
 
   applyLineFontSize(state.lineFontSize);
+  scrollActiveLineIntoView();
 }
 
 /**
@@ -88,4 +81,13 @@ function revealLine(textElement) {
   if (!textElement.classList.contains("hidden")) return;
   textElement.classList.remove("hidden");
   textElement.textContent = textElement.dataset.text ?? "";
+}
+
+function scrollActiveLineIntoView() {
+  if (state.activeLineIndex == null) return;
+  if (!state.speechPlaying && !state.autoPausedForUser) return;
+  const selector = `[data-line-index="${state.activeLineIndex}"]`;
+  const target = elements.linesContainer.querySelector(selector);
+  if (!target) return;
+  target.scrollIntoView({ block: "center", behavior: "smooth" });
 }

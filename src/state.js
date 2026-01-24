@@ -1,5 +1,3 @@
-import { FALLBACK_PLAY } from "./constants.js";
-
 /**
  * @typedef {{ id: string, name: string }} Character
  * @typedef {{ characterIds: string[], text: string }} PlayLine
@@ -36,7 +34,7 @@ export const state = {
   data: null,
   characterMap: {},
   selectedCharacterId: "",
-  hideMyLines: false,
+  hideMyLines: true,
   lineFontSize: 18,
   speechRate: 1,
   speechPlaying: false,
@@ -72,4 +70,4 @@ export function resetPlaybackState() {
   state.autoPausedForUser = false;
 }
 
-export const fallbackPlayData = FALLBACK_PLAY;
+export const fallbackPlayData = null;
