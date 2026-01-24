@@ -10,5 +10,5 @@
     "lib": ["DOM", "DOM.Iterable", "ES2020"],
     "skipLibCheck": true
   },
-  "include": ["app.js"]
+  "include": ["src/**/*.js"]
 }
