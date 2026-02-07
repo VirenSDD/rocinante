@@ -1,5 +1,5 @@
 import { LANGUAGE_LABELS } from "../constants.js";
-import { elements, setStatus, updateCurrentLineDisplay, updatePauseButtonView } from "../dom.js";
+import { elements, setStatus, updatePlaybackButtons } from "../dom.js";
 import { renderLines } from "../renderers.js";
 import { speechSupported, state } from "../state.js";
 
@@ -23,32 +23,48 @@ export function jumpToLine(lineIndex) {
   startPlaybackAt(lineIndex, "Reproduciendo desde el fragmento seleccionado…");
 }
 
-export function pauseSpeech() {
-  if (!state.speechPlaying) return;
-
-  if (state.autoPausedForUser) {
-    resumeAfterActorLine();
+export function togglePlayPause() {
+  if (!speechSupported) {
+    setStatus("La lectura en voz alta no está disponible en este navegador.");
     return;
   }
 
-  if (!speechSupported) return;
+  // Not playing → start playback
+  if (!state.speechPlaying) {
+    playOtherVoices();
+    return;
+  }
 
+  // Playing but auto-paused for actor → do nothing (use continue button)
+  if (state.autoPausedForUser) {
+    return;
+  }
+
+  // Playing and not paused → pause
   if (!state.isPaused) {
     if (state.currentUtterance && window.speechSynthesis.speaking && !window.speechSynthesis.paused) {
       window.speechSynthesis.pause();
     }
     state.isPaused = true;
-    setStatus("Lectura en pausa. Pulsa reanudar para continuar.");
-  } else {
-    if (state.currentUtterance && window.speechSynthesis.paused) {
-      window.speechSynthesis.resume();
-    } else if (!state.currentUtterance) {
-      continuePlayback();
-    }
-    state.isPaused = false;
-    setStatus("Lectura reanudada.");
+    setStatus("Lectura en pausa.");
+    updatePlaybackButtons();
+    return;
   }
-  updatePauseButtonView();
+
+  // Paused → resume
+  if (state.currentUtterance && window.speechSynthesis.paused) {
+    window.speechSynthesis.resume();
+  } else if (!state.currentUtterance) {
+    continuePlayback();
+  }
+  state.isPaused = false;
+  setStatus("Lectura reanudada.");
+  updatePlaybackButtons();
+}
+
+export function continueAfterActor() {
+  if (!state.autoPausedForUser) return;
+  resumeAfterActorLine();
 }
 
 export function stopSpeechPlayback(showStatus = true) {
@@ -62,10 +78,9 @@ export function stopSpeechPlayback(showStatus = true) {
   state.autoPausedForUser = false;
   if (showStatus) {
     setStatus("Lectura detenida.");
-    updateCurrentLineDisplay("Lectura detenida. Vuelve a presionar el botón para continuar.");
   }
   renderLines();
-  updatePauseButtonView();
+  updatePlaybackButtons();
 }
 
 export function updateLanguageOptions() {
@@ -129,14 +144,14 @@ function startPlaybackAt(startIndex, statusMessage) {
   state.speechPlaying = true;
   state.isPaused = false;
   state.autoPausedForUser = false;
-  updatePauseButtonView();
+  updatePlaybackButtons();
   setStatus(statusMessage);
   continuePlayback();
 }
 
 function continuePlayback() {
   if (!state.speechPlaying || state.isPaused) {
-    updatePauseButtonView();
+    updatePlaybackButtons();
     return;
   }
 
@@ -147,14 +162,9 @@ function continuePlayback() {
       state.activeLineIndex = idx;
       state.autoPausedForUser = true;
       state.isPaused = true;
-      setStatus("Tu turno. Di tu parlamento y pulsa continuar para seguir.");
-      updateCurrentLineDisplay(
-        `Tu turno (${line.characterIds.map((id) => state.characterMap[id] || id).join(" + ")}): ${
-          line.text
-        }`
-      );
+      setStatus("Tu turno. Di tu parlamento y pulsa Continuar.");
       renderLines();
-      updatePauseButtonView();
+      updatePlaybackButtons();
       return;
     }
 
@@ -183,18 +193,14 @@ function continuePlayback() {
       state.activeLineIndex = null;
       state.isPaused = false;
       state.autoPausedForUser = false;
-      updateCurrentLineDisplay("No se pudo reproducir la voz. Intenta otra vez.");
       renderLines();
-      updatePauseButtonView();
+      updatePlaybackButtons();
     };
     state.currentUtterance = utterance;
     state.activeLineIndex = idx;
-    updateCurrentLineDisplay(
-      `${line.characterIds.map((id) => state.characterMap[id] || id).join(" + ")}: ${line.text}`
-    );
     renderLines();
     window.speechSynthesis.speak(utterance);
-    updatePauseButtonView();
+    updatePlaybackButtons();
     return;
   }
 
@@ -203,9 +209,8 @@ function continuePlayback() {
   state.autoPausedForUser = false;
   state.activeLineIndex = null;
   setStatus("Lectura finalizada.");
-  updateCurrentLineDisplay("Lectura finalizada. Vuelve a reproducir cuando lo necesites.");
   renderLines();
-  updatePauseButtonView();
+  updatePlaybackButtons();
 }
 
 function resumeAfterActorLine() {
@@ -213,8 +218,7 @@ function resumeAfterActorLine() {
   state.isPaused = false;
   state.activeLineIndex = null;
   state.currentQueueIndex += 1;
-  setStatus("Continuando tras tu parlamento…");
-  updateCurrentLineDisplay("Continuando tras tu parlamento…");
+  setStatus("Continuando…");
   renderLines();
   continuePlayback();
 }

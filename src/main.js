@@ -1,4 +1,4 @@
-import { setStatus, updateCurrentLineDisplay, updateSpeechRateLabel, updateTextSizeLabel } from "./dom.js";
+import { setStatus, updateSpeechRateLabel, updateTextSizeLabel } from "./dom.js";
 import { applyPlayData, resetPlaybackState, speechSupported, state } from "./state.js";
 import { initControls } from "./ui/controls.js";
 import { loadPlayData } from "./services/playLoader.js";
@@ -22,9 +22,6 @@ async function init() {
       usedFallback
         ? "No se pudo leer play.json directamente (esto ocurre al abrir el archivo sin servidor). Mostramos una copia integrada."
         : "Selecciona tu personaje y comienza el ensayo."
-    );
-    updateCurrentLineDisplay(
-      "Pulsa “Reproducir otras voces” para seguir las intervenciones ajenas o desplázate y lee manualmente."
     );
   } catch (error) {
     console.error(error);

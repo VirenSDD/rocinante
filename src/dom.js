@@ -20,11 +20,9 @@ export const elements = {
   textSizeLabel: /** @type {HTMLElement} */ (getRequiredElement("textSizeLabel")),
   speechRate: /** @type {HTMLInputElement} */ (getRequiredElement("speechRate")),
   speechRateLabel: /** @type {HTMLElement} */ (getRequiredElement("speechRateLabel")),
-  playOthers: /** @type {HTMLButtonElement} */ (getRequiredElement("playOthers")),
-  pauseSpeech: /** @type {HTMLButtonElement} */ (getRequiredElement("pauseSpeech")),
-  stopSpeech: /** @type {HTMLButtonElement} */ (getRequiredElement("stopSpeech")),
+  playPauseBtn: /** @type {HTMLButtonElement} */ (getRequiredElement("playPauseBtn")),
+  continueBtn: /** @type {HTMLButtonElement} */ (getRequiredElement("continueBtn")),
   languageSelect: /** @type {HTMLSelectElement} */ (getRequiredElement("languageSelect")),
-  currentLineText: /** @type {HTMLElement} */ (getRequiredElement("currentLineText")),
   statusMessage: /** @type {HTMLElement} */ (getRequiredElement("statusMessage")),
   characterList: /** @type {HTMLElement} */ (getRequiredElement("characterList")),
   linesContainer: /** @type {HTMLElement} */ (getRequiredElement("linesContainer")),
@@ -40,13 +38,6 @@ let controlsCollapsed = true;
  */
 export function setStatus(message) {
   elements.statusMessage.textContent = message;
-}
-
-/**
- * @param {string} message
- */
-export function updateCurrentLineDisplay(message) {
-  elements.currentLineText.textContent = message;
 }
 
 /**
@@ -77,23 +68,21 @@ export function applyLineFontSize(size) {
   document.documentElement.style.setProperty("--line-text-size", `${size}px`);
 }
 
-export function updatePauseButtonView() {
-  if (!speechSupported || !state.selectedCharacterId) {
-    elements.pauseSpeech.disabled = true;
-    elements.pauseSpeech.textContent = "Pausar lectura";
-    return;
+export function updatePlaybackButtons() {
+  const canPlay = speechSupported && state.selectedCharacterId;
+
+  // Play/Pause button
+  elements.playPauseBtn.disabled = !canPlay;
+  if (!state.speechPlaying) {
+    elements.playPauseBtn.textContent = "Reproducir";
+  } else if (state.isPaused && !state.autoPausedForUser) {
+    elements.playPauseBtn.textContent = "Reanudar";
+  } else {
+    elements.playPauseBtn.textContent = "Pausar";
   }
 
-  elements.pauseSpeech.disabled = !state.speechPlaying;
-  if (!state.speechPlaying) {
-    elements.pauseSpeech.textContent = "Pausar lectura";
-  } else if (state.autoPausedForUser) {
-    elements.pauseSpeech.textContent = "Continuar tras mi parlamento";
-  } else if (state.isPaused) {
-    elements.pauseSpeech.textContent = "Reanudar lectura";
-  } else {
-    elements.pauseSpeech.textContent = "Pausar lectura";
-  }
+  // Continue button - only enabled when waiting for actor
+  elements.continueBtn.disabled = !state.autoPausedForUser;
 }
 
 /**

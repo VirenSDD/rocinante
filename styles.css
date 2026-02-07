@@ -14,7 +14,7 @@
 
 body {
   margin: 0;
-  padding-bottom: 140px;
+  padding-bottom: 80px;
 }
 
 main {
@@ -106,27 +106,6 @@ h1 {
 .helper {
   font-size: 0.85rem;
   color: #475569;
-}
-
-.current-line {
-  background: #fef3c7;
-  border-radius: 0.75rem;
-  padding: 0.75rem;
-  border: 2px solid #fcd34d;
-}
-
-.current-line-label {
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 0.85rem;
-  letter-spacing: 0.08em;
-  color: #92400e;
-}
-
-.current-line p {
-  margin: 0.35rem 0 0;
-  font-size: 1rem;
-  color: #7c2d12;
 }
 
 label {
@@ -285,29 +264,15 @@ button:not(:disabled):hover {
   width: 100%;
   background: #0f172a;
   color: #fff;
-  padding: 1rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  gap: 1.5rem;
+  padding: 0.75rem 1rem;
   box-shadow: 0 -10px 30px rgba(15, 23, 42, 0.4);
 }
 
-.tts-info {
-  flex: 2;
-}
-
-.tts-info p {
-  margin: 0.25rem 0 0;
-  font-size: 1rem;
-  color: #e2e8f0;
-}
-
 .tts-buttons {
-  flex: 1;
   display: flex;
   gap: 0.5rem;
-  align-items: center;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .tts-buttons button {
@@ -322,12 +287,7 @@ button:not(:disabled):hover {
     padding: 1rem;
   }
 
-  .tts-dock {
-    flex-direction: column;
-  }
-
   .tts-buttons {
-    width: 100%;
-    flex-direction: column;
+    max-width: none;
   }
 }
