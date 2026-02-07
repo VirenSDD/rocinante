@@ -1,29 +1,27 @@
-/** @type {Record<string, string>} */
-export const LANGUAGE_LABELS = {
-  es: "Español",
-  en: "Inglés",
-  fr: "Francés",
-  pt: "Portugués",
-  it: "Italiano",
-  de: "Alemán"
-};
+/**
+ * @typedef {import('../../domain/entities/play.js').PlayData} PlayData
+ */
 
+/**
+ * Fallback play data used when play.json cannot be loaded.
+ * @type {PlayData}
+ */
 export const FALLBACK_PLAY = {
   playId: "besos-bella-durmiente",
   title: "Besos para la Bella Durmiente",
   author: "J. Luis Alonso de Santos",
-  description: "Una adaptación breve para ensayar parlamentos clave con soporte visual y auditivo.",
+  description: "Una adaptaci\u00f3n breve para ensayar parlamentos clave con soporte visual y auditivo.",
   characters: [
     { id: "aurora", name: "Aurora" },
-    { id: "tomas", name: "Tomás" },
+    { id: "tomas", name: "Tom\u00e1s" },
     { id: "narrator", name: "Narrador" },
     { id: "abuela", name: "Abuela" },
-    { id: "guardian", name: "Guardián" },
+    { id: "guardian", name: "Guardi\u00e1n" },
     { id: "cocinero", name: "Cocinero" },
     { id: "paje", name: "Paje" },
     { id: "reina", name: "Reina" },
     { id: "rey", name: "Rey" },
-    { id: "bufon", name: "Bufón" },
+    { id: "bufon", name: "Buf\u00f3n" },
     { id: "hada", name: "Hada" },
     { id: "mensajero", name: "Mensajero" },
     { id: "multitud", name: "Multitud" }
@@ -43,19 +41,19 @@ export const FALLBACK_PLAY = {
     },
     {
       characterIds: ["tomas"],
-      text: "No soy príncipe, pero traigo el valor que faltaba."
+      text: "No soy pr\u00edncipe, pero traigo el valor que faltaba."
     },
     {
       characterIds: ["abuela"],
-      text: "Los cuentos crecen con nosotros, niño. Respira hondo."
+      text: "Los cuentos crecen con nosotros, ni\u00f1o. Respira hondo."
     },
     {
       characterIds: ["guardian"],
-      text: "Nadie pasa sin dejar atrás la duda."
+      text: "Nadie pasa sin dejar atr\u00e1s la duda."
     },
     {
       characterIds: ["hada"],
-      text: "Le regalé un sueño, ahora necesitan devolverle la risa."
+      text: "Le regal\u00e9 un sue\u00f1o, ahora necesitan devolverle la risa."
     },
     {
       characterIds: ["cocinero"],
@@ -67,7 +65,7 @@ export const FALLBACK_PLAY = {
     },
     {
       characterIds: ["paje"],
-      text: "Yo sostendré la puerta para que nadie aparte la mirada."
+      text: "Yo sostendr\u00e9 la puerta para que nadie aparte la mirada."
     },
     {
       characterIds: ["bufon", "multitud"],
@@ -75,7 +73,7 @@ export const FALLBACK_PLAY = {
     },
     {
       characterIds: ["aurora"],
-      text: "¿Quién me llama desde tan lejos? Siento calor en los labios."
+      text: "\u00bfQui\u00e9n me llama desde tan lejos? Siento calor en los labios."
     },
     {
       characterIds: ["tomas"],
