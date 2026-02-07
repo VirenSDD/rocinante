@@ -2,14 +2,14 @@ import {
   applyLineFontSize,
   elements,
   setStatus,
-  updatePauseButtonView,
+  updatePlaybackButtons,
   updateSpeechRateLabel,
   updateTextSizeLabel,
   updateToggleButtonLabel
 } from "../dom.js";
 import { renderCharacterList, renderLines } from "../renderers.js";
 import { speechSupported, state } from "../state.js";
-import { pauseSpeech, playOtherVoices, stopSpeechPlayback, jumpToLine } from "../services/speech.js";
+import { togglePlayPause, continueAfterActor, stopSpeechPlayback, jumpToLine } from "../services/speech.js";
 
 /**
  * @param {Event} event
@@ -24,12 +24,10 @@ export function handleCharacterChange(event) {
   state.hideMyLines = true;
   updateToggleButtonLabel(state.hideMyLines);
   elements.toggleLines.disabled = !state.selectedCharacterId;
-  elements.playOthers.disabled = !state.selectedCharacterId || !speechSupported;
-  elements.pauseSpeech.disabled = !state.selectedCharacterId;
   if (state.speechPlaying) {
     stopSpeechPlayback(false);
   }
-  updatePauseButtonView();
+  updatePlaybackButtons();
   renderLines();
   renderCharacterList();
 }
@@ -70,12 +68,9 @@ export function handleLanguagePreferenceChange(event) {
 
 export function initializeControlsDefaults() {
   elements.toggleLines.disabled = true;
-  elements.playOthers.disabled = true;
-  elements.pauseSpeech.disabled = true;
+  elements.playPauseBtn.disabled = true;
+  elements.continueBtn.disabled = true;
   if (!speechSupported) {
-    elements.playOthers.disabled = true;
-    elements.pauseSpeech.disabled = true;
-    elements.stopSpeech.disabled = true;
     elements.languageSelect.disabled = true;
     setStatus(
       "La lectura en voz alta no está disponible en este navegador. Puedes leer y ocultar tus parlamentos manualmente."
@@ -84,9 +79,8 @@ export function initializeControlsDefaults() {
 }
 
 export function bindActionButtons() {
-  elements.playOthers.addEventListener("click", playOtherVoices);
-  elements.pauseSpeech.addEventListener("click", pauseSpeech);
-  elements.stopSpeech.addEventListener("click", () => stopSpeechPlayback());
+  elements.playPauseBtn.addEventListener("click", togglePlayPause);
+  elements.continueBtn.addEventListener("click", continueAfterActor);
   elements.linesContainer.addEventListener("click", (event) => {
     const target = event.target;
     if (!(target instanceof HTMLElement)) return;
