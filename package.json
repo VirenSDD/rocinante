@@ -1,11 +1,13 @@
 {
   "name": "rocinante",
   "version": "1.0.0",
-  "description": "Static rehearsal aid for the play “Besos para la Bella Durmiente” by J. Luis Alonso de Santos.   Features: - Loads the script from `play.json`, shows all lines with large, high‑contrast cards. - Lets an actor pick their character, hide their own lines, and follow along via Web Speech with adjustable speed and language/voice selection. - Displays the line currently being narrated and automatically pauses so the actor can jump in when their cue arrives.",
+  "description": "Static rehearsal aid for the play \"Besos para la Bella Durmiente\" by J. Luis Alonso de Santos.   Features: - Loads the script from `play.json`, shows all lines with large, high-contrast cards. - Lets an actor pick their character, hide their own lines, and follow along via Web Speech with adjustable speed and language/voice selection. - Displays the line currently being narrated and automatically pauses so the actor can jump in when their cue arrives.",
   "scripts": {
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
-    "ci": "npm run lint && npm run typecheck"
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "ci": "npm run lint && npm run typecheck && npm run test"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +16,8 @@
     "@eslint/js": "^9.39.2",
     "eslint": "^9.39.2",
     "globals": "^17.1.0",
-    "typescript": "^5.9.3"
+    "jsdom": "^25.0.1",
+    "typescript": "^5.9.3",
+    "vitest": "^3.0.4"
   }
 }
