@@ -14,7 +14,7 @@
 
 body {
   margin: 0;
-  padding-bottom: 80px;
+  padding-bottom: 100px;
 }
 
 main {
@@ -259,24 +259,37 @@ button:not(:disabled):hover {
 
 .tts-dock {
   position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: #0f172a;
-  color: #fff;
-  padding: 0.75rem 1rem;
-  box-shadow: 0 -10px 30px rgba(15, 23, 42, 0.4);
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
 }
 
 .tts-buttons {
   display: flex;
-  gap: 0.5rem;
-  max-width: 400px;
-  margin: 0 auto;
+  gap: 0.75rem;
 }
 
 .tts-buttons button {
-  flex: 1;
+  width: auto;
+  padding: 0.85rem 1.5rem;
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.35);
+}
+
+.tts-buttons button.primary {
+  box-shadow: 0 8px 24px rgba(124, 58, 237, 0.4);
+}
+
+.tts-buttons button.secondary {
+  background: #fff;
+  border-color: #e2e8f0;
+  color: #0f172a;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.15);
+}
+
+.tts-buttons button:not(:disabled):hover {
+  transform: translateY(-2px);
 }
 
 @media (max-width: 640px) {
@@ -287,7 +300,11 @@ button:not(:disabled):hover {
     padding: 1rem;
   }
 
-  .tts-buttons {
-    max-width: none;
+  .tts-dock {
+    bottom: 1rem;
+  }
+
+  .tts-buttons button {
+    padding: 0.75rem 1.25rem;
   }
 }

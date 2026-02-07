@@ -28,7 +28,7 @@ export const translations = {
   "button.play": "Reproducir",
   "button.pause": "Pausar",
   "button.resume": "Reanudar",
-  "button.continue": "Continuar",
+  "button.continue": "Siguiente",
   "button.showMyLines": "Mostrar mis parlamentos",
   "button.hideMyLines": "Ocultar mis parlamentos",
   "button.showControlPanel": "Mostrar panel de control",
